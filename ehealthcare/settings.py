@@ -27,7 +27,7 @@ SECRET_KEY = '#a4m(!f(y)l&(q#t9!#p7^f7+6r=8bga%(!o4na^++oqeg87wo'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'ehealthconsult.herokuapp.com'
+    'ehealth-consult.herokuapp.com'
     # '127.0.0.1'
 ]
 
