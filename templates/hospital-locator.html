@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>
+
+        Hospital Locator
+
+    </title>
+
+    <link rel="icon" href="/static/icon48.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#349eeb">
+    <meta name="theme-color" content="#349eeb">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        .full-width {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        body {
+            width: 100vw;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            width: .5em;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(44, 37, 27, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(44, 37, 27, 0.5);
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            background: #2c251b;
+        }
+    </style>
+</head>
+<div class="full-width container-fluid sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark full-width bg-primary">
+        <a class="navbar-brand" href='/'><i class="fa fa-heartbeat" aria-hidden="true"></i><b>E-Healthcare</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active"><a class="nav-link" href='/'>Home</a></li>
+                <li class="nav-item"><a class="nav-link" href=''>Button 1</a></li>
+                <li class="nav-item"><a class="nav-link" href=''>Button 2</a></li>
+                <li class="nav-item"><a class="nav-link" href=''>Button 3</a></li>
+                <li class="nav-item"><a class="nav-link" href=''>Button 4</a></li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user" aria-hidden="true"></i>Profile </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info"
+                        aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item" href="#">My account</a>
+                        <a class="dropdown-item" href="#">Log out</a>
+                    </div>
+                    
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid full-width">
+
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+        <script
+            src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+            type="text/css">
+        <style>
+            #map1 {
+                height: 60vh;
+                width: 100vw;
+            }
+
+            .mapbox-directions-instructions {
+                overflow: scroll;
+                height: 35vh;
+            }
+
+            .mapbox-directions-instructions::-webkit-scrollbar {
+                display: none;
+            }
+
+            .mapbox-directions-instructions {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            canvas {
+                display: block;
+            }
+
+            .tablediv {
+                position: sticky;
+                height: 38vh;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+
+            .tablediv::-webkit-scrollbar {
+                width: 1em;
+            }
+
+            .tablediv::-webkit-scrollbar-track {
+                background: rgba(44, 37, 27, 0.3);
+            }
+
+            .tablediv::-webkit-scrollbar-thumb {
+                background: rgba(44, 37, 27, 0.5);
+            }
+
+            .tablediv::-webkit-scrollbar-thumb:active {
+                background: #2c251b;
+            }
+        </style>
+        <div style="position:abslolute;z-index:1000">
+            <div id="map1"></div>
+        </div>
+        <div class="tablediv">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table table-sm table-hover table-dark" id="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sl. No</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Distance(Km)</th>
+                                    <th scope="col">Address</th>
+                                </tr>
+                            </thead>
+                            <tbody id="hospitaltablebody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var mapa;
+            var lg, lt;
+            var opt, k, c = 1;
+
+            Position();
+
+            function Position() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        var lat = position.coords.latitude;
+                        var long = position.coords.longitude;
+                        mapmaker(long, lat);
+                    });
+                } else {
+                    alert("Sorry, your browser does not support HTML5 geolocation.");
+                }
+            }
+
+            function mapmaker(lg, lt) {
+                mapboxgl.accessToken = 'pk.eyJ1Ijoic3dhcmFqNTciLCJhIjoiY2t5NXZkeHc4MGE1YTJ2cGZpajR5enR4ZCJ9.myRStC0Mkb1dzmmRJOjX1w';
+                mapa = new mapboxgl.Map({
+                    container: 'map1',
+                    style: 'mapbox://styles/mapbox/navigation-night-v1',
+                    center: [lg, lt], // starting position
+                    zoom: 13 // starting zoom
+                });
+                mapa.addControl(new mapboxgl.NavigationControl(), 'top-left');
+                mapa.addControl(new mapboxgl.FullscreenControl(), 'top-left');
+                k = new MapboxDirections({
+                    accessToken: mapboxgl.accessToken,
+                    profile: 'mapbox/driving',
+                    controls: {
+                        inputs: true,
+                        instructions: true,
+                        profileSwitcher: true
+                    }
+                });
+                k.setOrigin([lg, lt]);
+                mapa.addControl(k, 'top-right');
+                mymarker(mapa, lt, lg);
+                markermaker(lt, lg);
+            }
+
+
+            function mymarker(mapa, lt, lg) {
+                var size = 100;
+                // implementation of CustomLayerInterface to draw a pulsing dot icon on the map
+                // see https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
+                var pulsingDot = {
+                    width: size,
+                    height: size,
+                    data: new Uint8Array(size * size * 4),
+
+                    // get rendering context for the map canvas when layer is added to the map
+                    onAdd: function () {
+                        var canvas = document.createElement('canvas');
+                        canvas.width = this.width;
+                        canvas.height = this.height;
+                        this.context = canvas.getContext('2d');
+                    },
+
+                    // called once before every frame where the icon will be used
+                    render: function () {
+                        var duration = 2000;
+                        var t = (performance.now() % duration) / duration;
+
+                        var radius = (size / 2) * 0.3;
+                        var outerRadius = (size / 2) * 0.7 * t + radius;
+                        var context = this.context;
+
+                        // draw outer circle
+                        context.clearRect(0, 0, this.width, this.height);
+                        context.beginPath();
+                        context.arc(
+                            this.width / 2,
+                            this.height / 2,
+                            outerRadius,
+                            0,
+                            Math.PI * 2
+                        );
+                        context.fillStyle = 'rgba(77, 104, 255,' + (1 - t) + ')';
+                        context.fill();
+
+                        // draw inner circle
+                        context.beginPath();
+                        context.arc(
+                            this.width / 2,
+                            this.height / 2,
+                            radius,
+                            0,
+                            Math.PI * 2
+                        );
+                        context.fillStyle = 'rgba(77, 104, 255, 1)';
+                        context.strokeStyle = 'white';
+                        context.lineWidth = 2 + 4 * (1 - t);
+                        context.fill();
+                        context.stroke();
+
+                        // update this image's data with data from the canvas
+                        this.data = context.getImageData(
+                            0,
+                            0,
+                            this.width,
+                            this.height
+                        ).data;
+
+                        // continuously repaint the map, resulting in the smooth animation of the dot
+                        mapa.triggerRepaint();
+
+                        // return `true` to let the map know that the image was updated
+                        return true;
+                    }
+                };
+
+                mapa.on('load', function () {
+                    buttoncreator(); toggledirn();
+                    mapa.addImage('pulsing-dot', pulsingDot, {
+                        pixelRatio: 2
+                    });
+
+                    mapa.addSource('points', {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'FeatureCollection',
+                            'features': [{
+                                'type': 'Feature',
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [lg, lt]
+                                }
+                            }]
+                        }
+                    });
+                    mapa.addLayer({
+                        'id': 'points',
+                        'type': 'symbol',
+                        'source': 'points',
+                        'layout': {
+                            'icon-image': 'pulsing-dot'
+                        }
+                    });
+                });
+            }
+
+            var main_url = 'https://places.ls.hereapi.com/places/v1/discover/explore?in=',
+                ending = '%3Br%3D17768&cat=hospital&size=100&apiKey=yqGj9Hvx5Gvgqp-g9Eg37Z-sSIHEMwZgbzcWYOnxzxM';
+
+            var lat, lon;
+
+            function markermaker(lt, lg) {
+                lat = lt;
+                lon = lg;
+                latlang = lt + '%2C' + lg;
+                url = main_url + latlang + ending;
+                fetch(url, {
+                    method: 'GET'
+                }).then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    return Promise.reject(response);
+                }).then(function (data) {
+                    markerplacer(data);
+                });
+            }
+
+            function recenter(e) {
+                mapa.flyTo({
+                    center: [lon, lat],
+                    zoom: 13,
+                    speed: 2,
+                    curve: 1,
+                    easing(t) {
+                        return t;
+                    }
+                });
+            }
+
+
+            function test(a, b) {
+                mapa.flyTo({
+                    center: [a, b],
+                    zoom: 13,
+                    speed: 2,
+                    curve: 1,
+                    easing(t) {
+                        return t;
+                    }
+                });
+                k.setDestination([a, b]);
+            }
+
+            function markerplacer(data) {
+
+
+                opt = {
+                    color: "rgba(255,100,100)",
+                };
+
+                for (var i = 0; i < data.results.items.length; i++) {
+                    var marker = new mapboxgl.Marker(opt)
+                        .setLngLat([data.results.items[i].position[1], data.results.items[i].position[0]])
+                        .setPopup(new mapboxgl.Popup().setHTML(data.results.items[i].title + "<br>" + data.results.items[i].vicinity))
+                        .addTo(mapa);
+
+                    var tabcontent = "<tr class='clickable-row' onclick='test(" + data.results.items[i].position[1] + "," + data.results.items[i].position[0] + ")'></td><td>" + (i + 1) + "</td><td>" + data.results.items[i].title + "</td><td>" + (data.results.items[i].distance / 1000) + "</td><td>" + data.results.items[i].vicinity + "</td></tr>";
+                    document.querySelector("#hospitaltablebody").innerHTML += tabcontent;
+                }
+            }
+
+            function toggledirn() {
+                var poip = document.getElementsByClassName("mapboxgl-ctrl-directions");
+                for (i of poip) {
+                    if (i.style.visibility == "hidden") i.style.visibility = "visible";
+                    else i.style.visibility = "hidden";
+                }
+            }
+            function buttoncreator() {
+                var kool = document.getElementsByClassName("mapboxgl-ctrl-bottom-left");
+                var temp = kool[0].innerHTML;
+                kool[0].innerHTML = `<div class="mapboxgl-ctrl mapboxgl-ctrl-group">
+            <button class="mapboxgl-ctrl-cb1" onclick="recenter()" type="button" aria-label="Recentre" title="Recenter"><span class="fa fa-crosshairs"></span></button>
+            <button class="mapboxgl-ctrl-cb2" onclick="toggledirn()" type="button" aria-label="Directions" title="Toggle Direction Controls"><span class="fa fa-share"></span></button>
+        </div>`;
+                kool[0].innerHTML += temp;
+            }
+        </script>
+
+    </div>
+    <!-- <hr>
+    <footer class="container">
+        <p>For any COVID 19 related queries, call your State Helpline/Ministry of Health & Family Welfare's 24X7
+            helpline at
+            1075 or 011-23978046</p>
+    </footer> -->
+</body>
+
+</html>

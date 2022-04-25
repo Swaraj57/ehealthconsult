@@ -1,0 +1,231 @@
+[
+    {
+        "name" : "Dolo 650mg Strip Of 15 Tablets",
+        "category" : "Dolo 650 tablet is a pain-relieving medicine. It also helps reduce fever. Dolo 650 contains a paracetamol as its active ingredent. Dolo 650 tablet is used for a wide range of conditions such as headache, backache, migraine, toothache, body pain etc.",
+        "price" : "30.96",
+        "imgSrc" : "/static/med/dollo.jpg"
+    },
+    {
+        "name" : "Crocin Advance 500mg Strip Of 20 Tablets",
+        "category" : "It is used to treat mild to moderate pain including pain including headache,migraine,toothache,menstrual pain ,and reduce fever",
+        "price" : "20",
+        "imgSrc" : "/static/med/crocin.jpg"
+    },
+    {
+        "name" : "Cetcip Strip of 12 Tablets",
+        "category" : "Cetcip tablet is used to treat conjunctivitis,Hay fever,Allergy. It can be taken with or without food.",
+        "price" : "18.75",
+        "imgSrc" : "/static/med/cetcip.jpg"
+    },
+    {
+        "name" : "Okacet Tablet",
+        "category" : "Used in the treatment against Common allergies,itching ,cold.",
+        "price" : "17.50",
+        "imgSrc" : "/static/med/okacet.png"
+    },
+    {
+        "name" : "Vertin 8 mg Tablet",
+        "category" : "It is a histamine analogue that is used to treat symptoms such as dizziness,vertigo,loss of balance.",
+        "price" : "134.22",
+        "imgSrc" : "/static/med/vertin.jpg"
+    },
+    {
+        "name" : "Gelusil Mps Tablet",
+        "category" : "Gelusil tablet is in the treatment of stomach upset,heartburn and acid indigestion",
+        "price" : "20.21",
+        "imgSrc" : "/static/med/gelusil.jpg"
+    },
+    {
+        "name" : "Amoxicilin 1000 Tablet",
+        "category" : "It is an antibiotic used to treat a number of bacterial infections",
+        "price" : "176.40",
+        "imgSrc" : "/static/med/amoxicillin.jpeg"
+    },
+    {
+        "name" : "Wincold Z Tablet",
+        "category" : "For the traetment against stuffy nose,watery eyes,and congestion",
+        "price" : "49.85",
+        "imgSrc" : "/static/med/wincold.jpg"
+    },
+    {
+        "name" : "Brufen 400mg Tablet",
+        "category" : "It is used to relieve pain and inflammation",
+        "price" : "26.33",
+        "imgSrc" : "/static/med/brufen.jpg"
+    },
+    {
+        "name" : "Pyrigesic 500Mg Tablet",
+        "category" : "It is an anti-inflammatory and analgesic to relieve pain and swelling ",
+        "price" : "8.36",
+        "imgSrc" : "/static/med/pyrigesic.jpg"
+    },
+    {
+        "name" : "Cavit Pm Tablet",
+        "category" : "It is a strip of 15 Tablets, used for treatment against acid indigestion and hearrtburn",
+        "price" : "195.75",
+        "imgSrc" : "/static/med/cavit.jpg"
+    },
+    {
+        "name" : "Xtracal Pm Tablet",
+        "category" : "It  is a strip of tablets used to ensure adequate supply of calcium to bones",
+        "price" : "120.95",
+        "imgSrc" : "/static/med/xtracel.jpg"
+    },
+    {
+        "name" : "Lanol er Tablet",
+        "category" : "A strip of tablet used in the treatment of mild pain of toothache and menstural period pain",
+        "price" : "90.25",
+        "imgSrc" : "/static/med/lanol.jpg"
+    },
+    {
+        "name" : "Cefdinir Tablet",
+        "category" : "An antibiotic Tablet against pneumonia and infections of skin and eyes",
+        "price" : "165.89",
+        "imgSrc" : "/static/med/cefdinir.jpg"
+    },
+    {
+        "name" : "Ibuprofen 800 Tablet",
+        "category" : "Nonprescription ibuprofen is used to reduce fever and to relieve muscle aches , erthritis and backaches.",
+        "price" : "210.35",
+        "imgSrc" : "/static/med/ibuprofen.jpg"
+    },
+    {
+        "name" : "Flexon Tablet",
+        "category" : "It is a non-steroidal anti-inflammatory drugs which relieves the symptoms of muscle pain and arthritis pain",
+        "price" : "22.86",
+        "imgSrc" : "/static/med/flexon.jpg"
+    },
+    {
+        "name" : "Malidens 650 Tablet",
+        "category" : "It helps to releive pain against headaches ,migrane and nerve pain",
+        "price" : "17.00",
+        "imgSrc" : "/static/med/maliden.jpg"
+    },
+    {
+        "name" : "Sumo 650 Tablet",
+        "category" : " It is a painkiller used to reduce the pain against menstrual pain,osteoarthritis pain",
+        "price" : "29.34",
+        "imgSrc" : "/static/med/sumo.jpg"
+    },
+    {
+        "name" : "Aciloc 150 Tablet",
+        "category" : "Aciloc 150 Tablet is used to treat for indigestion and heartburn and acid reflux",
+        "price" : "36.96",
+        "imgSrc" : "/static/med/aciloc.jpg"
+    },
+    {
+        "name" : "Becozym C Forte Tablet",
+        "category" : " It is commonly used for the diagnosis of produce red blood cells and transporting oxygen",
+        "price" : "23.75",
+        "imgSrc" : "/static/med/becozym.jpg"
+    },
+    {
+        "name" : "Cobaforte Cd3 Tablet",
+        "category" : "It is a dietary supplementary containing calcium and vitamin D",
+        "price" : " 237.60",
+        "imgSrc" : "/static/med/cobaforte.jpg"
+    },
+    {
+        "name" : "Nervofit Table",
+        "category" : "It is a effective in bone related discorders",
+        "price" : " 203.55",
+        "imgSrc" : "/static/med/nervofit.jpg"
+    },
+    {
+        "name" : "Nuroday D3 Tablet",
+        "category" : "It helps in the formation of red blood cells and enchances the absorption of iron in the body",
+        "price" : " 181.44",
+        "imgSrc" : "/static/med/nuroday.jpg"
+    },
+    {
+        "name" : "Hosit D3 Tablet",
+        "category" : "It is used in the treatment against the disease related to repair of cells",
+        "price" : " 174.99",
+        "imgSrc" : "/static/med/HositD3.jpg"
+    },
+    {
+        "name" : "Coecoral D3 Capsule",
+        "category" : "It is a vitamin D tablet consisting of 15 capsules",
+        "price" : " 211.89",
+        "imgSrc" : "/static/med/coecoral.jpg" 
+    },
+    {
+        "name" : "Imodium A-D Tablets",
+        "category" : "this medication is used to treat sudden diarrhea ",
+        "price" : " 45.75",
+        "imgSrc" : "/static/med/imodium.jpg" 
+    },
+    {
+        "name" : "Vizylac DT10 Tablet",
+        "category" : "This tablet is used against Anameia and High Cholestrol",
+        "price" : " 43.60",
+        "imgSrc" : "/static/med/vizylac.jpg" 
+    },
+    {
+        "name" : "Antoxipan Strip of 15 Tablets",
+        "category" : "It treats migrane and cardiac arrhythmia",
+        "price" : " 315.60",
+        "imgSrc" : "/static/med/antoxipan.jpg"  
+    },
+    {
+        "name" : "Glutone MD Tablet",
+        "category" : "The tablet acts against the disease of jaundice",
+        "price" : "528.15",
+        "imgSrc" : "/static/med/glutone.jpg"  
+    },
+    {
+        "name" : "Tendomac Tablet",
+        "category" : "It is used as the medicine for runny nose",
+        "price" : "32,65",
+        "imgSrc" : "/static/med/tendomac.jpg" 
+    },
+    {
+        "name" : "Monticope A Tablet",
+        "category" : "Tablet against asthma and sneezing and runny nose",
+        "price" : "108.95",
+        "imgSrc" : "/static/med/monticope.jpg" 
+    },
+    {
+        "name" : "Sinarest Vapocaps Tablet",
+        "category" : "It is used to provide prompt releif from symptoms of common cold and infections",
+        "price" : "77.50",
+        "imgSrc" : "/static/med/sinarest.jpg" 
+    },
+    {
+        "name" : "Ovalife Tablet",
+        "category" : "It is used in the treatment of polycystic ovarin sysndrome",
+        "price" : "118.90",
+        "imgSrc" : "/static/med/ovalife.jpg" 
+    },
+    {
+        "name" : "Fertisure F Tablet",
+        "category" : "It is a nutrional supplement",
+        "price" : "217.30",
+        "imgSrc" : "/static/med/fertisure.jpg" 
+    },
+    {
+        "name" : "Myonext Plus Tablet",
+        "category" : "It is a vitamin tablet containing of 10 tablets in a strip",
+        "price" : "173.40",
+        "imgSrc" : "/static/med/mynonext.jpg" 
+    },
+    {
+        "name" : "Trazer Tablet",
+        "category" : "It is a tablet for the treatment of ascorbic acid",
+        "price" : "168.78",
+        "imgSrc" : "/static/med/trazer.jpg" 
+    },
+    {
+        "name" : "Ezorb Fem Tablet",
+        "category" : "A medicine used for the treatment of high blood pressure conatinig a strip of 15 strips",
+        "price" : "282.90",
+        "imgSrc" : "/static/med/ezorb.jpg" 
+    },
+    {
+        "name" : "Rediva MA Tablet",
+        "category" : "Rediva MA Tablet is used in the treatment of a discorder calledd metabolic syndrome",
+        "price" : "203.55",
+        "imgSrc" : "/static/med/rediva.jpg" 
+    }
+    
+]

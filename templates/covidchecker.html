@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>
+
+        COVID-19 Survey
+
+    </title>
+
+    <link rel="icon" href="/static/icon48.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#349eeb">
+    <meta name="theme-color" content="#349eeb">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        .full-width {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        body {
+            width: 100vw;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            width: .5em;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(44, 37, 27, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(44, 37, 27, 0.5);
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            background: #2c251b;
+        }
+    </style>
+</head>
+<div class="full-width container-fluid sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark full-width bg-primary">
+        <a class="navbar-brand" href='/'><i class="fa fa-heartbeat" aria-hidden="true"></i><b>E-Healthcare</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active"><a class="nav-link" href='/'>Home</a></li>
+                <li class="nav-item"><a class="nav-link" href=''>Button 1</a></li>
+                <li class="nav-item"><a class="nav-link" href=''>Button 2</a></li>
+                <li class="nav-item"><a class="nav-link" href=''>Button 3</a></li>
+                <li class="nav-item"><a class="nav-link" href=''>Button 4</a></li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+                <div id="installContainer" class="hidden" style='padding : 0px 5px 3px 0px'>
+                    <button id="butInstall" type="button" class="btn btn-secondary">Install</button>
+                </div>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user" aria-hidden="true"></i>Profile </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info"
+                        aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item" href="#">My account</a>
+                        <a class="dropdown-item" href="#">Log out</a>
+                    </div>
+                    
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid">
+
+    <p style="margin-left: 33%;">Fill this survey to know about possibility of being a covid positive or negative.</p>
+    <p style="margin-left: 34%;">Long press or hover mouse over the symptoms for more information.</p>
+
+        <h5 style="margin-left: 38%;">Answer all the questions to get results...</h5>
+        <form name="sym" style="margin-left: 46%;">
+        <p>Symptoms:</p>
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="anosmia"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="anosmia"
+                    value="0">No</label>
+            <a title="Anosmia(Loss of Smell)" data-content="Loss of smell is a primary symptom of COVID-19"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Loss of Smell
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="dyspnea"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="dyspnea"
+                    value="0">No</label>
+            <a title="Dyspnea(Shortness of breath)"
+                data-content="When you have shortness of breath, you can't catch your breath or get enough air in your lungs."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Shortness of Breath
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="fever"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="fever"
+                    value="0">No</label>
+            <a title="Fever" data-content="Body Temperature greater than 98.6 F" class="btn btn-sm text-secondary"
+                tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Fever
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="dihorrea"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="dihorrea"
+                    value="0">No</label>
+            <a title="Dihorrea" data-content="Loose,watery stools three or more times in one day"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Dihorrea
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="fatigue"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="fatigue"
+                    value="0">No</label>
+            <a title="Fatigue" data-content="Overall feeling of tiredness or lack of energy"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Fatigue
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="cough"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="cough"
+                    value="0">No</label>
+            <a title="Dry Cough"
+                data-content="A dry cough is a cough that doesn't bring up mucus. It may feel like you have a tickle in the back of your throat triggering your cough reflex, giving you hacking coughs."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Persistant Dry Cough
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="abdomen"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="abdomen"
+                    value="0">No</label>
+            <a title="Abdominal Pain"
+                data-content="Pain from inside the abdomen or the outer muscle wall, ranging from mild and temporary to severe."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Abdominal Pain
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="loa"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="loa"
+                    value="0">No</label>
+            <a title="Loss of Appetite"
+                data-content="not wanting to eat, unintentional weight loss, and not feeling hungry"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Loss of Appetite
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="headache"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="headache"
+                    value="0">No</label>
+            <a title="Headache" data-content="A painful sensation in any part of the head, ranging from sharp to dull"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Headache
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="runny"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="runny"
+                    value="0">No</label>
+            <a title="Rhinorrea (Runny Nose)"
+                data-content="runny nose refers to a discharge (fluid and mucus) coming from the nasal passages"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Runny Nose
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="congestion"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="congestion"
+                    value="0">No</label>
+            <a title="Nasal Congestion" data-content="Nasal passages swollen with excess fluid and mucus"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Nasal Congestion
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="throat"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="throat"
+                    value="0">No</label>
+            <a title="Sore Throat"
+                data-content=" A sore throat is pain, scratchiness or irritation of the throat that often worsens when you swallow."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Sore Throat
+            </a>
+        </div>
+        </p>
+        <!--done-->
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="contact"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="contact"
+                    value="0">No</label>
+            <a title="Suspected Case" data-content="having been in contact with a confirmed or probable COVID-19 case"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Contact With COVID-19 infected person
+            </a>
+        </div>
+        </p>
+        <!--done-->
+
+        <!--risks-->
+        <p>Risks: </p>
+
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="age"
+                    value="1">&gt;65</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="age"
+                    value="0">&lt;65</label>
+            <a title="Age" data-content="People greater than 65 Years of age are at more risk from SARS-CoV-2 virus."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Age
+            </a>
+        </div>
+        </p>
+
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="diabetes"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="diabetes"
+                    value="0">No</label>
+            <a title="Diabetes"
+                data-content="A group of diseases that result in too much sugar in the blood (high blood glucose)."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Diabetes
+            </a>
+        </div>
+        </p>
+
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="highbp"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="highbp"
+                    value="0">No</label>
+            <a title="Hypertension"
+                data-content="also known as high blood pressure (HBP), is a long-term medical condition in which the blood pressure in the arteries is persistently elevated."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Hypertension
+            </a>
+        </div>
+        </p>
+
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="heart"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="heart"
+                    value="0">No</label>
+            <a title="Heart Disease"
+                data-content="Heart conditions that include diseased vessels, structural problems and blood clots."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Heart Disease
+            </a>
+        </div>
+        </p>
+
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="lung"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="lung"
+                    value="0">No</label>
+            <a title="Lung Disease"
+                data-content="Lung disease refers to disorders that affect the lungs. Lung diseases are: Asthma, chronic bronchitis, and emphysema, etc"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Lung Disease
+            </a>
+        </div>
+        </p>
+
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="liver"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="liver"
+                    value="0">No</label>
+            <a title="Gl/Liver Diseases"
+                data-content="Gall Bladder diseases and Liver diseases like: hepatitis A, hepatitis B, and hepatitis C, fatty liver disease, cirrhosis, hemochromatosis and Wilson disease"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Gl/Liver Diseases
+            </a>
+        </div>
+        </p>
+
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="kidney"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="kidney"
+                    value="0">No</label>
+            <a title="Kidney Disease" data-content="Kidney disease means kidneys are damaged and can't filter as well."
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Kidney Disease
+            </a>
+        </div>
+        </p>
+
+        <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-warning"><input required="required" type="radio" name="aids"
+                    value="1">Yes</label>
+            <label class="btn btn-sm btn-outline-success"><input required="required" type="radio" name="aids"
+                    value="0">No</label>
+            <a title="Immunodeficiency"
+                data-content="Immunodeficiency or immunocompromise is a state in which the immune system's ability to fight infectious disease and cancer is compromised or entirely absent. Eg: HIV AIDS"
+                class="btn btn-sm text-secondary" tabindex=0 href="#" data-toggle="popover" data-trigger="hover">
+                Immunodeficiency
+            </a>
+        </div>
+        </p>
+
+
+        <div class="collapse" id="results">
+            <div class="card card-header"><b>RESULTS</b></div>
+            <div class="card card-body">
+                <div id="result1">
+                </div>
+                <div id="result2">
+                </div>
+                <div id="result3">
+                </div>
+                <div id="result4">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="collapse" id="risks">
+            <div class="card card-body" id="risks">
+                Older adults and people who have severe underlying medical conditions like heart or lung disease
+                or diabetes seem to be at higher risk for developing serious complications from COVID-19
+                illness. More information on <a
+                    href="https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-at-higher-risk.html">Are
+                    you at higher risk for serious illness?</a>
+            </div>
+        </div>
+        <br>
+        <div class="collapse" id="tips">
+            <div class="card card-header"><b>Protecting yourself and others from the spread COVID-19</b></div>
+            <div class="card card-body" id="resultsss">
+                <p><strong></strong>You can reduce your chances of being infected or spreading COVID-19 by
+                    taking some simple precautions:</p>
+                <ul>
+                    <li>Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them
+                        with soap and water. Why? Washing your hands with soap and water or using alcohol-based
+                        hand rub kills viruses that may be on your hands.</li>
+                    <li>Maintain at least 1 metre (3 feet) distance between yourself and others. Why? When
+                        someone coughs, sneezes, or speaks they spray small liquid droplets from their nose or
+                        mouth which may contain virus. If you are too close, you can breathe in the droplets,
+                        including the COVID-19 virus if the person has the disease.</li>
+                    <li>Avoid going to crowded places. Why? Where people come together in crowds, you are more
+                        likely to come into close contact with someone that has COIVD-19 and it is more
+                        difficult to maintain physical distance of 1 metre (3 feet).</li>
+                    <li>Avoid touching eyes, nose and mouth. Why? Hands touch many surfaces and can pick up
+                        viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth.
+                        From there, the virus can enter your body and infect you.</li>
+                    <li>Make sure you, and the people around you, follow good respiratory hygiene. This means
+                        covering your mouth and nose with your bent elbow or tissue when you cough or sneeze.
+                        Then dispose of the used tissue immediately and wash your hands. Why? Droplets spread
+                        virus. By following good respiratory hygiene, you protect the people around you from
+                        viruses such as cold, flu and COVID-19.</li>
+                    <li>Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever,
+                        until you recover. Have someone bring you supplies. If you need to leave your house,
+                        wear a mask to avoid infecting others. Why? Avoiding contact with others will protect
+                        them from possible COVID-19 and other viruses.</li>
+                    <li>If you have a fever, cough and difficulty breathing, seek medical attention, but call by
+                        telephone in advance if possible and follow the directions of your local health
+                        authority. Why? National and local authorities will have the most up to date information
+                        on the situation in your area. Calling in advance will allow your health care provider
+                        to quickly direct you to the right health facility. This will also protect you and help
+                        prevent spread of viruses and other infections.</li>
+                    <li>Keep up to date on the latest information from trusted sources, such as WHO or your
+                        local and national health authorities. Why? Local and national authorities are best
+                        placed to advise on what people in your area should be doing to protect themselves.</li>
+                </ul>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+
+        <!--<button onClick="checkallfilled()" id="btn" class="btn btn-success">Get Results</button>-->
+        <a class="btn btn-sm btn-info" href="/survey">Reset form</a><br><br>
+    </form>
+
+    <button onClick="checkallfilled()" id="btn" class="btn btn-success">Get Results</button>
+
+    -->
+    <script>
+        function checkallfilled() {
+            if ($('input[type="radio"]:checked').length == $('input[type="radio"]').length / 2) checksymptoms();
+            console.log("continious check for filled form is running");
+        }
+
+        function checksymptoms() {
+            var anosmia = $("input[name='anosmia']:checked").val();
+            var dyspnea = $("input[name='dyspnea']:checked").val();
+            var fever = $("input[name='fever']:checked").val();
+            var contact = $("input[name='contact']:checked").val();
+            var sym = [$("input[name='throat']:checked").val(), $("input[name='congestion']:checked").val(), $("input[name='runny']:checked").val(), $("input[name='headache']:checked").val(), $("input[name='loa']:checked").val(), $("input[name='abdomen']:checked").val(), $("input[name='cough']:checked").val(), $("input[name='fatigue']:checked").val(), $("input[name='dihorrea']:checked").val()];
+            var risks = [$("input[name='age']:checked").val(), $("input[name='aids']:checked").val(), $("input[name='kidney']:checked").val(), $("input[name='liver']:checked").val(), $("input[name='lung']:checked").val(), $("input[name='heart']:checked").val(), $("input[name='highbp']:checked").val(), $("input[name='diabetes']:checked").val()];
+            riskcount = $.grep(risks, function (elem) { return elem === '1'; }).length;
+            symcount = $.grep(sym, function (elem) { return elem === '1'; }).length;
+            if (riskcount >= 1) $('#risks').collapse('show');
+            else $('#risks').collapse('hide');
+
+            if (contact == '1') {
+                document.getElementById("result1").innerHTML = "<br><p>Since you came into contact with another COVID-19 positive or suspected case, You should immediately self isolate yourself</p><br>";
+            }
+            else {
+                document.getElementById("result1").innerHTML = "";
+            }
+
+            if (dyspnea == '1') {
+                document.getElementById("result2").innerHTML = "<br><h6>Loss of breath(dyspnea) is a severe symptom of COVID-19.</h6><p><a href='https://www.mygov.in/aarogya-setu-app/'>Use the Aarogya Setu app to contact your local health authorities.</a></p>";
+            }
+            else {
+                document.getElementById("result2").innerHTML = "";
+            }
+
+            if (anosmia == '1' || fever == '1') {
+                if (symcount >= 1) {
+                    document.getElementById("result3").innerHTML = "<h3>You may have COVID(You show symptoms)</h3><p>Your symptoms might be due to general flu or due to the COVID-19 virus. However, it is strictly recommended for you to follow self-isolation for a couple of weeks.</p>";
+                    //var coffind=document.getElementById("coffindance")
+                    //coffind.play();
+                }
+            }
+            else if (symcount >= 1) {
+                document.getElementById("result3").innerHTML = "<p>Your symptoms might be due to general flu or due to the COVID-19 virus. However, it is strictly recommended for you to follow self-isolation for a couple of weeks.</p>";
+            }
+            else {
+                document.getElementById("result3").innerHTML = "";
+            }
+
+            if (symcount == 0 && anosmia == '0' && dyspnea == "0") {
+                document.getElementById("result4").innerHTML = "<h3>You probably do not have COVID-19</h3><p>You show no symptoms for COVID-19.</p>";
+            }
+            else document.getElementById("result4").innerHTML = '';
+            $('#results').collapse('show')
+            $('#tips').collapse('show')
+        }
+
+        setInterval(function () {
+            checkallfilled();
+        }, 3000);
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <!--https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        function showDropdown() {
+            if ($("#Dropdown").css("display") == "block") {
+                $("#Dropdown").css("display", "none");
+            } else {
+                $("#Dropdown").css("display", "block");
+            }
+        }
+    </script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyChDgyGyST4A4VaSWj5kJqTMYnToXGNjjE",
+            authDomain: "web-sample-befff.firebaseapp.com",
+            projectId: "web-sample-befff",
+            storageBucket: "web-sample-befff.appspot.com",
+            messagingSenderId: "495769976625",
+            appId: "1:495769976625:web:3e2c4f08a925092670ba10",
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="/static/hi.js"></script>
+
+
+    <a href="https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200402-sitrep-73-covid-19.pdf"
+        target="blank">Source</a>
+</div>
+</div>
+<hr>
+<footer class="container">
+    <p>For any COVID 19 related queries, call your State Helpline/Ministry of Health & Family Welfare's 24X7
+        helpline at
+        1075 or 011-23978046</p>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MedStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/static/cart.css">
+</head>
+
+<body>
+
+    <!-- header  -->
+    <header>
+        <div class="container">
+            <!-- navbar -->
+            <nav class="navbar">
+                <a href="" class="navbar-brand">MedStore.</a>
+                <button type = "button" class = "navbar-toggler">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div class="cart">
+                    <button type="button" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-info"></span>
+                    </button>
+
+                    <div class="cart-container">
+                        <div class="cart-list">
+                        </div>
+
+                        <div class="cart-total">
+                            <h3>Total: ₹</h3>
+                            <span id="cart-total-value"></span>
+                        </div>
+                        <div class="cart-total">
+                            <button onclick= gettotal() type="submit">
+                                checkout
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- end of navbar -->
+
+            <!-- banner -->
+            <div class="banner">
+                <div class="banner-content">
+                    <h1>Medical Store on the go...</h1>
+                    <p class="text">Choose from the wide range of varieties of Madicines, needed on day-to-day basis. </p>
+                </div>
+
+                <div class="banner-img">
+                    <img src="/static/med/medfooter.png" alt="banner image">
+                </div>
+            </div>
+            <!-- end of banner  -->
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- products section  -->
+    <section class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-list">
+            </div>
+        </div>
+    </section>
+    <!-- end of products section -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-banner">
+            <div class="container">
+                <h2>MedStore</h2>
+                <p class="text">Didn't find the product you are looking for? Sent a message with the details of your product
+                    and we'll add that product in our MedStore.
+                </p>
+                <br>
+                <br>
+                <br>
+                <button type="button" class="btn">Send a message</button>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+
+<script>
+    function gettotal() {
+        const total = document.getElementById("cart-total-value")
+        let a = total.textContent
+        
+        sessionStorage.setItem("cartTotal", a)
+        location.replace("checkout.html")
+        
+    }
+</script>
+
+
+
+    <script src="/static/med.js"></script>
+</body>
+
+</html>

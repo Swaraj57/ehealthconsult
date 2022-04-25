@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/login.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Login Successful</title>
+    <style>
+        .navbar {
+            background: rgb(67, 155, 255);
+            background: linear-gradient(90deg, rgba(67, 155, 255, 1) 35%, rgba(107, 176, 255, 1) 100%);
+        }
+
+        .link-design {
+            position: relative;
+        }
+
+        .link-design::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%) scaleX(0);
+            transform-origin: 50% 50%;
+            width: 100%;
+            border-bottom: 2px solid #fff;
+            transition: all 0.5s ease;
+        }
+
+        .link-design:hover:before {
+            transform: translate(-50%) scaleX(1);
+            border-bottom: 2px solid #fff;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="/static/default.jpg" alt="no image" style="width: 3%; height: auto;" >
+    <h1 id="username"></h1>
+    <h2 id ="displayname"></h2>
+    <img id="userimage" style="width: 3%; height: auto;">
+    <h1>Login Successfully..</h1>-
+    <button onclick=logout() class="btn solid">Logout??</button> -->
+
+    <div class="navbar fixed w-full h-16 justify-between text-white px-4 flex items-center">
+        <div>
+            <p class="text-lg font-bold">eHealth Care</p>
+        </div>
+
+        <div class="navitems flex items-center">
+            <ul class="navbar-nav flex navbar-center mr-4">
+                <li class="nav-item" style="padding: 0px 15px">
+                    <a class="nav-link active link-design" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item" style="padding: 0px 15px">
+                    <a class="nav-link link-design">Button 1</a>
+                </li>
+                <li class="nav-item" style="padding: 0px 15px">
+                    <a class="nav-link link-design">Button 2</a>
+                </li>
+                <li class="nav-item" style="padding: 0px 15px">
+                    <a class="nav-link link-design">Button 3</a>
+                </li>
+            </ul>
+            <div class="relative flex items-center cursor-pointer" onclick="showDropdown()">
+                <div class="w-9 h-9 rounded-full">
+                    <img id="userimage" alt="" class="rounded-full" />
+                </div>
+                <div class="ml-3">
+                    <h2 id="displayname"></h2>
+                    <h2 id="username"></h2>
+                    <p class="font-bold text-md"></p>
+                </div>
+                <div class="ml-3">
+                    <img src="https://img.icons8.com/fluency-systems-filled/20/ffffff/expand-arrow.png" />
+                </div>
+            </div>
+            <div id="Dropdown" style="position: absolute; left: 88%; top: 7%; display: none">
+                <button class="w-full cursor-pointer h-full rounded-sm shadow-sm text-black flex items-center bg-white"
+                    onclick="logout()" style="padding: 10px 50px">
+                    <img src="https://img.icons8.com/fluency-systems-filled/20/000000/exit.png" className="mr-2" />
+                    <p>Logout</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <!--https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        function showDropdown() {
+            if ($("#Dropdown").css("display") == "block") {
+                $("#Dropdown").css("display", "none");
+            } else {
+                $("#Dropdown").css("display", "block");
+            }
+        }
+    </script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyChDgyGyST4A4VaSWj5kJqTMYnToXGNjjE",
+            authDomain: "web-sample-befff.firebaseapp.com",
+            projectId: "web-sample-befff",
+            storageBucket: "web-sample-befff.appspot.com",
+            messagingSenderId: "495769976625",
+            appId: "1:495769976625:web:3e2c4f08a925092670ba10",
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="/static/hi.js"></script>
+    <script src="/static/index.js"></script>
+</body>
+
+</html>
