@@ -22,7 +22,7 @@
             <nav class="navbar">
                 <a href="" class="navbar-brand">MedStore.</a>
                 <button type = "button" class = "navbar-toggler">
-                    <i class = "fas fa-bars"></i>
+                    <i><img src="/static/logo png.png" alt=""> </i>
                 </button>
                 <div class="cart">
                     <button type="button" id="cart-btn">
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="banner-img">
-                    <img src="/static/med/medfooter.png" alt="banner image">
+                    <img src="med/medfooter.png" alt="banner image">
                 </div>
             </div>
             <!-- end of banner  -->
@@ -100,7 +100,7 @@
         let a = total.textContent
         
         sessionStorage.setItem("cartTotal", a)
-        location.replace("checkout.html")
+        location.replace("/checkout")
         
     }
 </script>
