@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from .forms import heartform,diabetesform
 import joblib
 # Create your views here.
@@ -23,10 +24,10 @@ def pharmacy(request):
 
 def medstore(request):
     return render (request, 'medstore.html')
-
+@csrf_exempt
 def checkout(request):
     return render (request, 'checkout.html')
-
+@csrf_exempt
 def confirmation(request):
     return render (request, 'confirmation-page.html')
 
