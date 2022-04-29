@@ -40,6 +40,12 @@ def mobile(request):
 def faq(request):
     return render (request, 'faq.html')
 
+def about(request):
+    return render (request, 'about.html')
+
+def contact(request):
+    return render (request, 'contact.html')
+
 def diabetes(request):
 	result= None
 	if request.method == 'POST':
