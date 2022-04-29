@@ -1,6 +1,6 @@
 firebase.auth().onAuthStateChanged((user)=>{
     if(!user){
-        location.replace("login.html")
+        location.replace("/login")
     }else{
 
         document.getElementById("username").innerHTML = "you are currently logged in as: "+user.email
